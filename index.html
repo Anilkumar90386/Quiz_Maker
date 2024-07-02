@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="#" id="home-link">Home</a>
+        <a href="#" id="create-quiz-link">Create Quiz</a>
+        <a href="#" id="take-quiz-link">Take Quiz</a>
+    </nav>
+    <div class="container" id="home-page">
+        <h1>Welcome to the Quiz Platform!</h1>
+        <p>Create and take quizzes easily. Get immediate feedback on your scores.</p>
+    </div>
+    <div class="container" id="create-quiz-page" style="display: none;">
+        <h2>Create Quiz</h2>
+        <form id="quiz-form">
+            <div class="form-group">
+                <label for="quiz-title">Quiz Title</label>
+                <input type="text" id="quiz-title" required>
+            </div>
+            <div id="questions-container"></div>
+            <button type="button" id="add-question-btn">Add Question</button>
+            <button type="submit">Create Quiz</button>
+        </form>
+    </div>
+    <div class="container" id="take-quiz-page" style="display: none;">
+        <h2>Select a Quiz</h2>
+        <div id="quiz-list"></div>
+    </div>
+    <div class="container" id="quiz-page" style="display: none;">
+        <h2 id="quiz-title-display"></h2>
+        <form id="take-quiz-form">
+            <div id="quiz-questions"></div>
+            <button type="submit">Submit Quiz</button>
+        </form>
+    </div>
+    <div class="container" id="feedback-page" style="display: none;">
+        <h2>Quiz Feedback</h2>
+        <p id="feedback-message"></p>
+        <button id="retake-quiz-btn">Take Another Quiz</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
